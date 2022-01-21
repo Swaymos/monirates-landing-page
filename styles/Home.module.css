@@ -1,116 +1,950 @@
+
+
+/* Grid Styling */
+
 .container {
-  padding: 0 2rem;
+  padding: 0;
+  width: 100%;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapperSmaller {
+  width: 80%;
+  margin: 10px auto;
+  position: relative;
+}
+
+.row {
   align-items: center;
-}
-
-.footer {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.col3 {
+  width: 30%;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.col4 {
+  width: 40%;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.col5 {
+  width: 48%;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.col12 {
+  width: 100%;
 }
 
-.title,
-.description {
+/* Navigation Styling */
+
+.navigation{
+  background: #fff;
+  padding: 6px 40px;
+}
+
+.navigation ul{
+  margin: 0; 
+}
+
+.navigation ul li{
+  display: inline-block;
+}
+
+.monirateLogo{
+  cursor: pointer !important;
+}
+
+.navigation ul li a{
+  color: #192259;
+  display: block;
+  font-size: 18px;
+  padding: 18px 14px;
+  margin: 10px 6px;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+
+.mobileHeaderContent ul li a{
+  color: #192259;
+  display: block;
+  font-size: 18px;
+  background: #FF2E63;
+  width: 100%;
+  padding: 8px 20px;
+  margin: 0 6px;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+
+.navigation ul:nth-child(3) li a{
+  padding: 18px 20px;
+  margin: 22px 6px;
+}
+
+
+.navigation ul a.active, .navigation ul li a:active{
+  color: #FF2E63;
+}
+
+.navigation ul li a:hover{
+  color: #FF2E63;
+}
+
+.navigation ul:nth-child(3) li:nth-child(2) a{
+  background: #FF2E63 !important;
+  box-shadow: 0px 0px 30px rgba(255,46,99,.2);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navigation ul:nth-child(3) li:nth-child(2) a:hover {
+  background: #192259 !important;
+  box-shadow: 0px 0px 30px rgba(25,34,89,.2);
+}
+
+.navigation ul:nth-child(3) li:nth-child(1) a{
+  background: #fff !important;
+  border:2px solid rgba(25,34,89,.03);
+  border-radius: 4px;
+  color: #192259;
+  margin-right: 20px;
+}
+
+.navigation ul:nth-child(3) li:nth-child(1) a:hover{
+  background: #fff !important;
+  border:2px solid #FF2E63;
+  border-radius: 4px;
+  color: #FF2E63;
+}
+
+
+
+.mobileHeader{
+  padding: 10px;
+  transition: height .3s ease;
+  display: none;
+}
+
+.mobileHeader ul li{
+  display: block;
+  line-height: 2.4em;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+
+.toggleButton {
+  outline: none;
+  border: none;
+  background: rgba(249,32,87,.2);
+  color: #FF2E63;
+  padding: 10px 16px;
+  font-size: 30px;
+  border-radius: 6px;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+/* Hero Section Styling */
+
+.hero{
+  background: rgba(1,204,136,.08);
+  padding: 60px 0;
 }
 
-.grid {
+.pageBlock{
+  text-align: center;
+}
+
+.hero h1{
+  font-weight: 900;
+  font-size: 40px;
+  color: #192259;
+}
+
+.hero p{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.7em;
+  color: #192259;
+}
+
+.actionButton {
+  display: flex;
+  padding-left: 0;
+  justify-content: flex-start;
+}
+
+.actionButton li{
+  width: 40%;
+  padding: 10px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.actionButton li:hover {
+  transform: scale(1.08);
+}
+
+.floatingPic{
+  position: relative;
+}
+
+.firstPic {
+  width: 60%;
+  animation: float 10s infinite;
+}
+
+.firstPicLarger {
+  width: 100%;
+  animation: float 10s infinite;
+}
+
+.firstPicAbsolute {
+  width: 100%;
+  position: absolute;
+  bottom: -224px;
+}
+
+.Cube {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  animation: floatrotate 30s infinite;
+  z-index: -1;
+}
+
+.Ring{
+  position: absolute;
+  bottom: 10%;
+  right: 90%;
+  width: 20%;
+  animation: float 8s infinite;
+}
+
+.Sphere {
+  width: 36%;
+  top: 0;
+  right: 20%;
+  z-index: -1;
+  position: absolute;
+  animation: float 8s infinite;
+}
+
+.currencyBlock {
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+  left: -40px;
+  width: 50%;
+  animation: float 8s infinite;
+}
+
+.transactionBlock {
+  position: absolute;
+  z-index: 10;
+  width: 90%;
+  bottom: 0;
+  animation: float 8s infinite;
+}
+
+
+
+/* How It Works Styling */
+
+.appBenefit{
+  text-align: center;
+  padding: 80px 0;
+}
+
+.appBenefit>h2{
+  color: #192259;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.appBenefit>p{
+  color: #192259;
+  font-size: 20px;
+}
+
+.appBenefit ul {
+  margin-top: 60px;
+}
+
+.appBenefit ul li{
+  text-align: left;
+  padding: 50px 46px;
+  border-radius: 6px;
+  transition: all .3s ease;
+  border:2px solid rgba(226,228,240,.2);
+  margin-top: 30px;
+}
+
+.appBenefit ul li a{
+  font-size: 18px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  font-weight: 500;
+  color: #FF2E63;
+  line-height: 2.8em;
+  transition: all .3s ease;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.appBenefit ul li a:hover{
+  color: #192259;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.appBenefit ul li div span {
+  margin-left: 6px;
+  transition: all .3s ease;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.appBenefit ul li:hover span {
+  margin-left: 16px;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.appBenefit ul li:hover{
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(25,34,89,.03);
+  border-color: transparent;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.appBenefit ul li h3{
+  color: #192259;
+  font-weight: 700;
+  font-size: 20px;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.appBenefit ul li p{
+  color: #192259;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Secure Wallet Styling */
+
+.secureWallet {
+  background: rgba(1,204,136,.02);
+}
+
+.featureBlock {
+  position: relative;
+  padding:100px 0;
+}
+
+.featureBlock h2{
+  font-weight: 900;
+  font-size: 38px;
+  color: #192259;
+}
+
+.featureBlock p{
+  font-size: 20px;
+  line-height: 1.8em;
+  color: #192259;
+}
+
+.featureBlock ul.benefitBlock{
+  padding-left: 0;
+}
+
+.featureBlock ul.benefitBlock li {
+  border:2px solid rgba(226,228,240,.2);
+  display: flex;
+  background: #fff;
+  padding: 16px 30px;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+
+.featureBlock ul.benefitBlock p{
+  font-size: 18px;
+}
+
+.featureBlock ul.benefitBlock h4{
+  font-size: 20px;
+  font-weight: 900;
+  color: #192259;
+  margin:10px 0;
+}
+
+.featureBlock ul.benefitBlock li span {
+  margin-left: 20px;
+}
+
+.sectionDivider {
+  position: absolute;
+  bottom: -32%;
+  width: 40%;
+  transform: scaleX(-1);
+  right: 30%;
+}
+
+/* Call To Action Styling */
+
+.callToAction{
+  padding: 80px 0;
+}
+
+.callToAction .wrapper {
+  border-radius: 6px;
+  padding: 100px 80px;
+  background: rgb(249,32,87);
+background: -moz-linear-gradient(71deg, rgba(249,32,87,1) 0%, rgba(255,177,41,1) 100%);
+background: -webkit-linear-gradient(71deg, rgba(249,32,87,1) 0%, rgba(255,177,41,1) 100%);
+background: linear-gradient(71deg, rgba(249,32,87,1) 0%, rgba(255,177,41,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endColorstr="#ffb129",GradientType=1);
+}
+
+.callToActionButton {
+  display: flex;
+  padding-left: 0;
+  justify-content: flex-start;
+}
+
+.callToActionButton li{
+  cursor: pointer;
+  width: 32%;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+.callToActionButton li:hover {
+  transform: scale(1.08);
+}
+
+.callToAction h2 {
+  font-size: 38px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* Footer Styling */
+.footer {
+  padding: 80px 40px;
+}
+
+.footerContent {
+  text-align: center;
+}
+
+.footerContent h2 {
+  font-size: 38px;
+  font-weight: 900;
+  color: #192259;
+}
+
+.footerContent p{
+  font-size: 18px;
+  color: #192259;
+}
+
+.footerButton{
+  padding-top: 30px;
+}
+
+.footerButton a {
+  transition: all .3s ease;
+  padding: 20px 28px;
+  background: rgba(255,46,99,.2);
+  font-size: 18px;
+  color: #FF2E63;
+  border-radius: 4px;
+}
+
+.footerButton a:hover {
+  background: #192259;
+  color: #fff;
+}
+
+.mainFooter {
+  border-top: 2px solid rgba(226,228,240,.2);
+  margin-top: 80px;
+}
+
+.footerLink {
+  display: flex;
+}
+
+.footerLink li a {
+  font-size: 26px;
+  padding: 16px;
+  margin: 10px 4px;
+  color: #FF2E63;
+  transition: all .3s ease;
+}
+
+.footerLink li a:hover {
+  color: #192259;
+}
+
+/* Testimonial Styling */
+
+.Testimonial {
+  position: relative;
+  background: rgba(1,204,136,.02);
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.Testimonial h2.header {
+  font-weight: 900;
+  color: #192259;
+  text-align: center;
+}
+
+.Testimonial ul {
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(25,34,89,.02);
+  padding: 30px 50px;
+  border-radius: 6px;
+}
+
+.Testimonial ul .testimonyBlock p{
+  font-size: 22px;
+  line-height: 1.6em;
+  color: #192259;
+}
+
+.Testimonial ul .testimonyBlock span {
+  width: 10%;
+  display: inline-block;
+}
+
+.Testimonial ul .testifierBlock h2{
+  font-size: 18px;
+  color: #FF2E63;
+}
+
+.Testimonial ul .testifierBlock h4{
+  font-size: 16px;
+  color:#192259;
+  line-height: 0;
+  font-weight: 500;
+}
+
+/* Floating Animation Styling */
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes floatrotate {
+	0% {
+		transform: translatey(0px);
+    transform: rotate(0deg);
+	}
+	50% {
+		transform: translatey(-20px);
+    transform: rotate(360deg);
+	}
+	100% {
+		transform: translatey(0px);
+    transform: rotate(0deg);
+	}
+}
+
+/* Responsive Styling */
+
+@media screen and (max-width:900px) {
+  
+  /* Hero Styling */
+
+  .hero .wrapperSmaller{
+    width: 70%;
   }
+  .hero {
+    padding: 110px 0;
+  }
+  .hero .col4{
+    width: 100%;
+  }
+  .hero .col4:nth-child(2){
+    display: none;
+  }
+
+  /* How It Works Styling */
+
+  .HowItWork .wrapper{
+    width: 60%;
+  }
+
+  .HowItWork .wrapper .col3{
+    width: 100%;
+  }
+
+  /* Feature Block Styling */
+
+  .featureBlock{
+    padding: 60px 0;
+  }
+
+  .featureBlock .wrapperSmaller{
+    width: 80%;
+  }
+
+  .featureBlock .col4{
+    width: 100%;
+  }
+
+  .featureBlock .col5{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .sectionDivider{
+    display: none;
+  }
+
+  /* Monirate Feature Styling */
+
+  .MonirateFeature{
+  }
+
+  .MonirateFeature .wrapper{
+    width: 96%;
+  }
+
+  .MonirateFeature .wrapper .col3{
+    width: 46%;
+    padding: 30px;
+  }
+
+  /* Call To Action */
+
+  .callToAction .wrapper{
+    width: 80%;
+    padding: 80px 0;
+  }
+
+  .callToAction .col5{
+    width: 100%;
+    text-align: center;
+  }
+
+  .callToActionButton{
+    justify-content: center;
+  }
+
+  .callToAction .col5:nth-child(2){
+    display: none;
+  }
+
+  /* Testimonial Styling */
+
+  .Testimonial .wrapper{
+    width: 90%;
+  }
+  
+  .Testimonial ul{
+    padding: 30px 22px;
+  }
+
+  .Testimonial ul .testimonyBlock p{
+    font-size: 18px;
+  }
+  
+  .Testimonial ul .testifierBlock h2{
+    font-size: 18px;
+  }
+
+  .Testimonial ul .testifierBlock h4{
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .desktopHeader{
+    display: none;
+  }
+  .mobileHeader{
+    display: block;
+  }
+  
+  /* Feature Block Styling */
+
+  .featureBlock .col5{
+    order: 1;
+  }
+
+  .featureBlock .col4{
+    order: 2;
+  }
+}
+
+@media screen and (max-width:620px) {
+
+  /* Floating Images Styling */
+
+  .Cube{
+    width: 40%;
+  }
+
+  .Ring{
+    width: 16%;
+  }
+
+  .currencyBlock {
+    width: 70%;
+  }
+
+  .transactionBlock {
+    width: 110%;
+  }
+
+  /* Navigation Styling */
+
+
+  .navigation{
+    background: #fff;
+    padding: 6px 10px;
+  }  
+
+  .navigation ul:nth-child(3) li:nth-child(1) a{
+    margin-right: 0;
+  }
+
+  .mobileHeader ul:nth-child(2),.mobileHeader ul:nth-child(3) {
+
+  }
+
+  .actionButton li {
+    width: 50%;
+  }
+  
+  /* Hero Styling */
+
+  .hero .wrapperSmaller{
+    width: 86%;
+  }
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1{
+    font-size: 34px;
+  }
+
+  .hero p{
+    font-size: 22px;
+  }
+
+  /* Action Button Styling */
+
+  .callToActionButton li{
+    width: 40%;
+  }
+
+
+  /* How It Works Styling */
+
+  .HowItWork .wrapper{
+    width: 80%;
+  }
+
+  /* Feature Block Styling */
+
+  .featureBlock{
+    padding: 60px 0;
+  }
+
+  .featureBlock .wrapperSmaller{
+    width: 86%;
+  }
+
+  .featureBlock h2{
+    font-size: 32px;
+  }
+
+  /* Monirate Feature Styling */
+
+  .MonirateFeature .wrapper{
+    width: 96%;
+  }
+
+  .MonirateFeature .wrapper .col3{
+    width: 48%;
+    padding: 30px 20px;
+  }
+
+  .MonirateFeature p{
+    font-size: 16px;
+  }
+
+  .MonirateFeature h3{
+    font-size: 18px !important;
+  }
+
+  /* Call To Action */
+
+  .callToAction .wrapper{
+    width: 90%;
+    padding: 40px 0;
+  }
+
+  .callToAction h2{
+    font-size: 30px;
+  }
+
+    /* Testimonial Styling */
+
+    .Testimonial .wrapper{
+      width: 80%;
+    }
+    
+    .Testimonial ul.col5{
+      padding: 20px 22px;
+      width: 100%;
+    }
+  
+    .Testimonial ul .testimonyBlock p{
+      font-size: 20px;
+      font-weight: 500;
+    }
+    
+
+
+  /* Footer Styling */
+  .mainFooter {
+    padding-top: 30px;
+  }
+  .mainFooter .col3{
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerLink{
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width:420px) {
+  
+  /* Hero Styling */
+
+  .hero .wrapperSmaller{
+    width: 90%;
+  }
+  .hero {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .actionButton{
+    justify-content: center;
+  }
+
+  .hero h1{
+    font-size: 30px;
+  }
+
+  .hero p{
+    font-size: 20px;
+  }
+
+
+  /* How It Works Styling */
+
+  .HowItWork .wrapper{
+    width: 90%;
+  }
+
+  /* Feature Block Styling */
+
+  .featureBlock{
+    padding: 20px 0;
+  }
+
+  .featureBlock .wrapperSmaller{
+    width: 90%;
+  }
+
+  .featureBlock .benefitBlock li {
+    display: block !important;
+  }
+
+  .featureBlock h2{
+    font-size: 28px;
+  }
+
+  .featureBlock p{
+    font-size: 18px;
+  }
+
+  .appBenefit{
+    padding: 40px 0;
+  }
+
+  .appBenefit ul li{
+    padding: 50px 30px;
+  }
+
+  /* Monirate Feature Styling */
+
+  .MonirateFeature .wrapper{
+    width: 80%;
+  }
+
+  .MonirateFeature .wrapper .col3{
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .MonirateFeature p{
+    font-size: 18px;
+  }
+
+  .MonirateFeature h3{
+    font-size: 18px !important;
+  }
+
+  /* Call To Action */
+
+  .callToAction .wrapper{
+    width: 94%;
+    padding: 40px 0;
+  }
+
+  .callToAction h2{
+    font-size: 28px;
+  }
+
+
+  /* Footer Styling */
+  .footer{
+    padding: 60px 20px;
+  }
+  .mainFooter {
+    padding-top: 30px;
+  }
+
+  .footerContent h2{
+    font-size: 34px;
+  }
+
+  .mainFooter .col3{
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerLink{
+    justify-content: center;
+  }
+
 }

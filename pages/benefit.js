@@ -9,6 +9,7 @@ import CallToAction from '../components/CallToAction'
 import Footer from '../components/Footer'
 import MonirateFeature from '../components/MonirateFeatures'
 import Testimonial from '../components/Testimonial'
+import BenefitHeader from '../components/BenefitHeader'
 import AppHead from '../components/AppHead'
 import Head from 'next/head'
 
@@ -17,20 +18,17 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-   <AppHead>
+    <AppHead>
       <div className={styles.container}>
       <NavBar />
-      <Hero />
-      <HowItWork />
+      <BenefitHeader />
       <SecureWallet />
       <SuperIntuitive />
       <CrossPlatform />
-      <MonirateFeature />
       <Testimonial />
       <CallToAction />
       <Footer />
     </div>
-   </AppHead>
-    
+    </AppHead>
   )
 }
