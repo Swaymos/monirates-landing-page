@@ -34,7 +34,7 @@ export default function HowItWork() {
                     <li className={style.col3}>
                             <Image src={swap} alt = "currency swap"/>
                             <h3>Swap Currency</h3>
-                            <p>Quickly swap any currency you have to the one you want.</p>
+                            <p>Quickly swap any currejsncy you have to the one you want.</p>
                         <Link href="" passHref>
                         Swap Currency
                         </Link>
