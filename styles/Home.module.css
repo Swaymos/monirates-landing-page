@@ -839,23 +839,28 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
   /* Hero Styling */
 
   .hero .wrapperSmaller{
-    width: 90%;
+    width: 88%;
   }
   .hero {
-    padding: 40px 0;
-    text-align: center;
+    padding: 40px 0 20px 0;
   }
 
   .actionButton{
     justify-content: center;
+    display: block;
+  }
+
+  .actionButton li{
+    width: 70%;
+    margin: 4px auto;
   }
 
   .hero h1{
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .hero p{
-    font-size: 20px;
+    font-size: 18px;
   }
 
 
@@ -898,7 +903,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
   /* Monirate Feature Styling */
 
   .MonirateFeature .wrapper{
-    width: 80%;
+    width: 90%;
   }
 
   .MonirateFeature .wrapper .col3{
@@ -915,6 +920,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
   }
 
   /* Call To Action */
+
+  .callToActionButton{
+    display: block;
+  }
+
+  .callToActionButton li{
+    width: 60%;
+    margin: 4px auto;
+  }
 
   .callToAction .wrapper{
     width: 94%;
@@ -947,4 +961,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
     justify-content: center;
   }
 
+}
+
+@media screen and (max-width:340px) {
+  .featureBlock ul.benefitBlock li, .appBenefit ul li {
+    padding: 16px 22px;
+  }
+  .Testimonial .wrapper{
+    width: 94%;
+  }
+  
+  .Testimonial ul.col5{
+    padding: 20px 16px;
+    width: 100%;
+  }
 }
