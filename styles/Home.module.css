@@ -59,6 +59,7 @@
 
 .monirateLogo{
   cursor: pointer !important;
+  width: 240px;
 }
 
 .navigation ul li a{
@@ -835,6 +836,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
 }
 
 @media screen and (max-width:420px) {
+
+  .monirateLogo{
+    width: 170px;
+  }
   
   /* Hero Styling */
 

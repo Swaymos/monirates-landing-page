@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import style from '../styles/Home.module.css'
-import logo from '../public/logo.png'
+import logo from '../public/logo.svg'
 import React, { useState } from 'react';
 import { IoMdMenu } from 'react-icons/io';
 import Link from "next/link";
@@ -39,7 +39,7 @@ export default function NavBar() {
                 <div className={style.row}>
                     <ul className={style.col12}>
                         <div className={style.row}>
-                        <li className={style.col5}><li className={style.monirateLogo}><Link href="/" passHref><Image src={logo} alt="Monirates logo"/></Link></li></li>
+                        <li className={style.col6}><li className={style.monirateLogo}><Link href="/" passHref><Image src={logo} alt="Monirates logo"/></Link></li></li>
                     <li className={style.col3}><button className={style.toggleButton} onClick={toggle}><IoMdMenu /></button></li>
                         </div>
                     </ul>
