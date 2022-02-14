@@ -1,19 +1,32 @@
 import Image from 'next/image'
 import style from '../styles/Home.module.css'
 import logo from '../public/logo.svg'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoMdMenu } from 'react-icons/io';
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function NavBar() {
+    const [navbar, setNavbar] = useState(false);
+    useEffect(()=>{
+        const changeBackground = () =>{
+            if(window.scrollY >= 80){
+              setNavbar(true);
+              console.log(window.scrollY);
+            }else{
+              setNavbar(false);
+            }
+          }
+        
+          window.addEventListener("scroll", changeBackground);
+    }, []); 
     const [showMe, setShowMe] = useState(false);
     function toggle(){
         setShowMe(!showMe);
     }
     const router = useRouter();
     return(
-        <>
+        <div className={navbar ? style.mainMenuActive : style.mainMenu}>
         <div className={style.desktopHeader}>
            <div className={style.wrapper}>
            <div className={style.navigation}>
@@ -55,6 +68,6 @@ export default function NavBar() {
                 </div>
           </div>
             </div>
-        </>
+        </div>
     )
 }

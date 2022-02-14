@@ -44,8 +44,23 @@
 
 /* Navigation Styling */
 
+.mainMenuActive{
+  background: rgba(1,204,136,.1);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all .3s ease;
+}
+
+.mainMenu{
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navigation{
-  background: #fff;
   padding: 6px 40px;
 }
 
@@ -133,6 +148,10 @@
   display: none;
 }
 
+.mobileHeader ul:first-child li{
+  text-align: right;
+}
+
 .mobileHeader ul li{
   display: block;
   line-height: 2.4em;
@@ -154,7 +173,7 @@
 
 .hero{
   background: rgba(1,204,136,.08);
-  padding: 60px 0;
+  padding: 140px 0 60px 0;
 }
 
 .pageBlock{
@@ -712,7 +731,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
 
 
   .navigation{
-    background: #fff;
     padding: 6px 10px;
   }  
 
@@ -847,7 +865,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f92057",endCo
     width: 88%;
   }
   .hero {
-    padding: 40px 0 20px 0;
+    padding: 100px 0 20px 0;
   }
 
   .actionButton{
